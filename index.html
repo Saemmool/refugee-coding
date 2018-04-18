@@ -9,6 +9,21 @@
     <meta name="author" content="">
 
     <title>Effects of Refugee Trauma</title>
+      
+        <!-- Begin Facebook tags -->
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="(square 350x350px)" />
+    <meta property="fb:page_id" content="" />
+    <meta property="og:type" content="website" />
+
+    <!-- Begin Twitter tags -->
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:url" content="" />
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:image" content="(square 350x350px)" />
+
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +43,7 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
+            
           <!-- Slide One - Set the background image for this slide in the line below -->
           <div class="carousel-item active" style="background-image: url('https://recreation-acm.activefederal.com/assetfactory.aspx?did=7282')">
             <div class="carousel-caption d-none d-md-block">
@@ -35,6 +51,7 @@
               <p>Uprooted</p>
             </div>
           </div>
+            
           <!-- Slide Two - Set the background image for this slide in the line below -->
           <div class="carousel-item" style="background-image: url('photos/chapter2cover.JPG')">
             <div class="carousel-caption d-none d-md-block">
@@ -42,6 +59,7 @@
               <p>Resettlement</p>
             </div>
           </div>
+            
           <!-- Slide Three - Set the background image for this slide in the line below -->
           <div class="carousel-item" style="background-image: url('photos/chapter3cover.JPG')";>
             <div class="carousel-caption d-none d-md-block">
@@ -49,6 +67,7 @@
               <p>Fractured Communities</p>
             </div>
           </div>
+            
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -101,10 +120,71 @@
       </div>
       <!-- /.container -->
     </footer>
+      
+      <!-- Story One -->
+    <div class="story container-fluid text-center align-items-center mt-5 d-block">
+      <div class="row justify-content-center">
+        <div class="col-sm-8">
+          <p class="ornament">Story One</p>
+          <h2>Story One headline with additional content</h2>
+          <p>Story one here yada yada yada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus ligula eget elementum ultrices. Etiam metus dolor, efficitur non mauris vitae, tristique mattis orci. Nulla semper placerat elit porta malesuada. Praesent pellentesque, turpis ac elementum volutpat, dolor purus tempor quam, ac malesuada velit arcu vel sapien.</p>
+        </div>
+      </div>
+    </div>
+    <!-- end story story One -->
+    
+    
+    <!-- Story Two -->    
+    <div class="story container-fluid text-center align-items-center mt-5 d-none">
+      <div class="row justify-content-center">
+        <div class="col-sm-8">
+          <p class="ornament">Story Two</p>
+          <h2>Story Two headline with additional content</h2>
+          <p>This is story two, yada. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus ligula eget elementum ultrices. Etiam metus dolor, efficitur non mauris vitae, tristique mattis orci. Nulla semper placerat elit porta malesuada. Praesent pellentesque, turpis ac elementum volutpat, dolor purus tempor quam, ac malesuada velit arcu vel sapien.</p>
+        </div>
+      </div>
+    </div>
+    <!-- end story story two -->
+    
+    <!-- Story Three -->
+    <div class="story container-fluid text-center align-items-center mt-5 d-none">
+      <div class="row justify-content-center">
+        <div class="col-sm-8">
+          <p class="ornament">Story Three</p>
+          <h2>Story Three headline with additional content</h2>
+          <p>And... third story... (you can add more) Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent cursus ligula eget elementum ultrices. Etiam metus dolor, efficitur non mauris vitae, tristique mattis orci. Nulla semper placerat elit porta malesuada. Praesent pellentesque, turpis ac elementum volutpat, dolor purus tempor quam, ac malesuada velit arcu vel sapien.</p>
+        </div>
+      </div>
+    </div>
+    <!-- end story story three -->
+      
+    <!--- 
+      Want more stories? Just copy either story two or three from above and paste below.
+      Note: The number of stories needs to match up with the number of slides for this
+      to work. 
+    -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+      <script>
+    jQuery(document).ready(function($){
+      
+      //dont automatically play carousel
+      $('.carousel').carousel({
+        interval: false
+      });
+      
+      //triggers when carousel transitions
+      $('.carousel').on('slide.bs.carousel', function (e) {
+        $(this).carousel('pause');//still don't play
+        $(".story").removeClass('d-block').addClass('d-none');//first make all stories invisible
+        $(".story").eq($(e.relatedTarget).index()).removeClass('d-none').addClass('d-block');//show only relevenat story 
+      });
+      
+    });
+    </script>
 
   </body>
 
