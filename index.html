@@ -38,9 +38,9 @@
     <header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#chapter1story" data-slide-to="0" class="active"></li>
+          <li data-target="#chapter2story" data-slide-to="1"></li>
+          <li data-target="#chapter3story" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
             
@@ -90,39 +90,23 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Uprooted
+              <a class="nav-link" href="#chapter1story">Uprooted
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Resettlement</a>
+              <a class="nav-link" href="#chapter2story">Resettlement</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Fractured Communities</a>
+              <a class="nav-link" href="#chapter3story">Fractured Communities</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
-    <!-- Page Content -->
-    <section class="py-5">
-      <div class="container">
-        <h1>Effects of Refugee Trauma: U.S. Southeast Asian Communities</h1>
-        <p>More explanation comes here.</p>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">by Alex Leeds Matthew, Cecilia Lei, Saemmool Lee</p>
-      </div>
-      <!-- /.container -->
-    </footer>
       
       <!-- Story One -->
-    <div class="story container-fluid text-center align-items-center mt-5 d-block">
+    <div id=chapter1story class="story container-fluid text-center align-items-center mt-5 d-block">
       <div class="row justify-content-center">
         <div class="col-sm-8">
           <p class="ornament">Story One</p>
@@ -135,7 +119,7 @@
     
     
     <!-- Story Two -->    
-    <div class="story container-fluid text-center align-items-center mt-5 d-none">
+    <div id=chapter2story class="story container-fluid text-center align-items-center mt-5 d-none">
       <div class="row justify-content-center">
         <div class="col-sm-8">
           <p class="ornament">Story Two</p>
@@ -147,7 +131,7 @@
     <!-- end story story two -->
     
     <!-- Story Three -->
-    <div class="story container-fluid text-center align-items-center mt-5 d-none">
+    <div id=chapter3story class="story container-fluid text-center align-items-center mt-5 d-none">
       <div class="row justify-content-center">
         <div class="col-sm-8">
           <p class="ornament">Story Three</p>
@@ -187,5 +171,14 @@
     </script>
 
   </body>
+    
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">by Alex Leeds Matthew, Cecilia Lei, Saemmool Lee</p>
+      </div>
+      <!-- /.container -->
+    </footer>
 
 </html>
