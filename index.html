@@ -273,6 +273,12 @@ div.gallery img {
       //triggers when carousel transitions
       $('.carousel').on('slide.bs.carousel', function (e) {
         $(this).carousel('pause');//still don't play
+        
+        //remove highlights  
+        $(".nav-item").removeClass("active");
+        $(".nav-item").eq($(e.relatedTarget).index()).addClass("active");
+        
+          
         $(".story").removeClass('d-block').addClass('d-none');//first make all stories invisible
         $(".story").eq($(e.relatedTarget).index()).removeClass('d-none').addClass('d-block');//show only relevenat story 
       });
